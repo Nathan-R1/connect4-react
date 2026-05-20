@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const src = join(__dirname, 'src');
-const out = join(__dirname, 'dist');
+const out = join(__dirname, 'docs');
 
 const args = process.argv.slice(2);
 const isDev = args.includes('--dev');
@@ -18,9 +18,9 @@ async function build() {
   const errorHandler = '<script>window.onerror=function(m,s,l,c,e){document.getElementById("root").innerHTML="<pre style=color:red;padding:20px;white-space:pre-wrap>"+m+"\\n"+(e&&e.stack||"")+"</pre>"}</script>';
   html = html.replace(
     '<script type="module" src="/src/main.tsx"></script>',
-    errorHandler + '<script src="/main.js"></script>'
+    errorHandler + '<script src="main.js"></script>'
   );
-  html = html.replace('</head>', '<link rel="stylesheet" href="/main.css"></head>');
+  html = html.replace('</head>', '<link rel="stylesheet" href="main.css"></head>');
 
   const ctx = await esbuild.context({
     entryPoints: [join(src, 'main.tsx')],
@@ -56,7 +56,7 @@ async function build() {
     await ctx.rebuild();
     writeFileSync(join(out, 'index.html'), html);
     ctx.dispose();
-    console.log('Build complete: dist/');
+    console.log('Build complete: docs/');
   }
 }
 

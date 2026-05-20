@@ -30,8 +30,7 @@
   width: 100%;
   max-width: min(90vw, 580px);
   padding: clamp(6px, 1vw, 12px) clamp(12px, 2vw, 20px);
-  background: #16213e;
-  border-radius: clamp(8px, 1vw, 12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .player-score {
@@ -68,9 +67,9 @@
 .board-container {
   position: relative;
   background: #0f3460;
-  border-radius: clamp(10px, 1.5vw, 18px);
   padding: clamp(8px, 1.2vw, 16px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
   max-width: min(90vw, 580px);
 }
