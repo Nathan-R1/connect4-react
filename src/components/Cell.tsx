@@ -28,7 +28,7 @@ export function Cell({ player, isWinning, isDrop, player1Color, player2Color }: 
     player === Player.Player1 ? 'player-1' : '',
     player === Player.Player2 ? 'player-2' : '',
     isWinning ? 'winning' : '',
-    isDrop ? 'drop' : '',
+    isDrop && !isWinning ? 'drop' : '',
   ]
     .filter(Boolean)
     .join(' ');
