@@ -16,6 +16,6 @@ body {
 
 #root {
   width: 100%;
-  max-width: 600px;
-  padding: 20px;
+  max-width: min(96vw, 720px);
+  padding: clamp(12px, 2.5vw, 24px);
 }
