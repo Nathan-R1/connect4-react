@@ -2,6 +2,10 @@
 
 A browser-based Connect Four game ported from the Java Swing version by Nathan Rais. Fully client-side — no backend, no database.
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Nathan-R1/connect4-react/master/public/resource.jpg" alt="Connect 4 Game" width="300">
+</div>
+
 ## Quick Start
 
 ```bash
