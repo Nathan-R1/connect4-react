@@ -1,7 +1,7 @@
 import { Player } from '../domain/types';
 
 const PIECE_CDN =
-  'https://cdn.jsdelivr.net/gh/Nathan-R1/Projects@master/Connect%20Four/Connect%20Four%20UI%20Java/src/resources';
+  'https://cdn.jsdelivr.net/gh/Nathan-R1/connect4-react@master/public/pieces';
 
 interface CellProps {
   player: Player;
@@ -17,7 +17,7 @@ export function Cell({ player, isWinning, isDrop, player1Color, player2Color }: 
 
   const style: React.CSSProperties = isOccupied
     ? {
-        backgroundImage: `url(${PIECE_CDN}/piece${color}.png)`,
+        backgroundImage: `url(${PIECE_CDN}/piece-${color.toLowerCase()}.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }
